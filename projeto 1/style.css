@@ -1,4 +1,4 @@
-body {
+ body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(to right, #9AC7D9, #E0F4FF);
@@ -9,7 +9,7 @@ body {
             background: url('img/bg.jpg') no-repeat center center/cover;
             text-align: center;
             padding: 4rem 1rem;
-            color: blue;
+            color: white;
         }
 
         .avatar {
