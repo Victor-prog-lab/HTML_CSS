@@ -9,7 +9,7 @@ body {
             background: url('img/bg.jpg') no-repeat center center/cover;
             text-align: center;
             padding: 4rem 1rem;
-            color: darkblue;
+            color: blue;
         }
 
         .avatar {
