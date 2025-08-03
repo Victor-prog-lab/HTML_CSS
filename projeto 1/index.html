@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,8 +8,7 @@
     <title>Meu Portfólio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<<body>
     <header class="container">
         <img src="img/avataaars (1) (1).png" class="avatar" alt="avatar">
         <p class="lead">Olá, meu nome é Victor Henrique</p>
@@ -34,19 +34,28 @@
     <script>
         const projetosContainer = document.getElementById('projetos-container');
 
-        for (let i = 1; i <= 6; i++) {
+        const projetos = [
+            { titulo: 'Clone do YouTube', descricao: 'Projeto com HTML e CSS recriando a interface do YouTube.', link: '#' },
+            { titulo: 'Relógio Digital', descricao: 'Relógio com JavaScript que exibe o horário atual em tempo real.', link: '#' },
+            { titulo: 'Calculadora', descricao: 'Projeto funcional de calculadora simples com operações básicas.', link: '#' },
+            { titulo: 'Quiz de Cultura Geek', descricao: 'Um quiz interativo com perguntas sobre cultura geek.', link: '#' },
+            { titulo: 'Portfólio Pessoal', descricao: 'Este próprio portfólio com layout estilizado em CSS puro.', link: '#' },
+            { titulo: 'Jogo da Velha', descricao: 'Clássico jogo da velha com lógica em JavaScript.', link: '#' }
+        ];
+
+        projetos.forEach(projeto => {
             const card = document.createElement('div');
             card.className = 'card';
 
             card.innerHTML = `
-                <img src="img/avataaars (1) (1).png" alt="Imagem do projeto">
-                <h3>Projeto ${i}</h3>
-                <p>Descrição do projeto ${i}. Adicione seu link e detalhes aqui.</p>
-                <a href="#" class="btn">Ver Projeto</a>
+                <img src="img/bg.jpg" alt="Imagem do projeto">
+                <h3>${projeto.titulo}</h3>
+                <p>${projeto.descricao}</p>
+                <a href="${projeto.link}" class="btn">Ver Projeto</a>
             `;
 
             projetosContainer.appendChild(card);
-        }
+        });
     </script>
 </body>
 
