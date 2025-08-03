@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +26,6 @@
     <main>
         <h2 class="titulo-projetos">Meus projetos!</h2>
         <div class="projetos" id="projetos-container">
-            <!-- Projetos serão inseridos dinamicamente via JS -->
         </div>
     </main>
 
@@ -35,12 +33,36 @@
         const projetosContainer = document.getElementById('projetos-container');
 
         const projetos = [
-            { titulo: 'Clone do YouTube', descricao: 'Projeto com HTML e CSS recriando a interface do YouTube.', link: '#' },
-            { titulo: 'Relógio Digital', descricao: 'Relógio com JavaScript que exibe o horário atual em tempo real.', link: '#' },
-            { titulo: 'Calculadora', descricao: 'Projeto funcional de calculadora simples com operações básicas.', link: '#' },
-            { titulo: 'Quiz de Cultura Geek', descricao: 'Um quiz interativo com perguntas sobre cultura geek.', link: '#' },
-            { titulo: 'Portfólio Pessoal', descricao: 'Este próprio portfólio com layout estilizado em CSS puro.', link: '#' },
-            { titulo: 'Jogo da Velha', descricao: 'Clássico jogo da velha com lógica em JavaScript.', link: '#' }
+            { 
+                titulo: 'Site do Android', 
+                descricao: 'Projeto com HTML e CSS recriando um site da android durante o curso do Gustavo Guanabara', 
+                link: 'https://victorhench.github.io/projeto-android/android.html',
+                imagem: 'img/android.jpg' 
+            },
+            { 
+                titulo: 'Gerador de senhas', 
+                descricao: 'Gerador de senhas aleatórias com Javascript', 
+                link: 'https://victorhench.github.io/projetos/password/senha.html',
+                imagem: 'img/senhas.jpg' 
+            },
+            { 
+                titulo: 'Projeto cordel', 
+                descricao: 'Projeto utilizando o efeito parallax', 
+                link: 'https://victorhench.github.io/projetos/paralax/Index.html',
+                imagem: 'img/cordel.jpg' 
+            },
+            { 
+                titulo: 'Formulário', 
+                descricao: 'Um formulário de cadastro de Devs', 
+                link: 'https://victorhench.github.io/projetos/Projetinho%20Formulario/index.html',
+                imagem: 'img/formulario.jpg' 
+            },
+            { 
+                titulo: 'Redes sociais', 
+                descricao: 'Esse projeto também foi realizado durante o curso do Gustavo Guanabara', 
+                link: 'https://victorhench.github.io/projeto-social/index.html',
+                imagem: 'img/redes.jpg' 
+            },
         ];
 
         projetos.forEach(projeto => {
@@ -48,14 +70,15 @@
             card.className = 'card';
 
             card.innerHTML = `
-                <img src="img/bg.jpg" alt="Imagem do projeto">
+                <img src="${projeto.imagem}" alt="Imagem do projeto">
                 <h3>${projeto.titulo}</h3>
                 <p>${projeto.descricao}</p>
-                <a href="${projeto.link}" class="btn">Ver Projeto</a>
+                <a href="${projeto.link}" class="btn" target="_blank">Ver Projeto</a>
             `;
 
             projetosContainer.appendChild(card);
         });
     </script>
 </body>
+
 </html>
